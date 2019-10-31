@@ -1,16 +1,18 @@
 class Card 
 
-	attr_accessor :type
+	attr_accessor :number, :suit
 
-	def initialize(type)
-		@type = type
+	def initialize(number, suit)
+		@number = number
+		@suit = suit
 	end
 
 end 
 
-RSpec.describe 'Card' do 
-	it 'has a type' do
-		card = Card.new('Ace of Spades')
-		expect(card.type).to eq('Ace of Spades')
+RSpec.describe Card do 
+	it 'has a suit and number' do
+		card = Card.new('Ace', 'Spades')
+		expect(card.number).to eq('Ace')
+		expect(card.suit).to eq('Spades')
 	end
 end
