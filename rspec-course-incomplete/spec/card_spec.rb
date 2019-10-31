@@ -10,9 +10,16 @@ class Card
 end 
 
 RSpec.describe Card do 
-	it 'has a suit and number' do
+
+	card = Card.new('Ace', 'Spades')
+
+	it 'has a suit' do
+		card = Card.new('Ace', 'Spades')
+		expect(card.suit).to eq('Spades')
+	end
+
+	it 'has a number' do
 		card = Card.new('Ace', 'Spades')
 		expect(card.number).to eq('Ace')
-		expect(card.suit).to eq('Spades')
 	end
 end
