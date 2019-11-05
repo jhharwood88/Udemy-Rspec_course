@@ -11,12 +11,14 @@ end
 
 RSpec.describe Card do 
 
-	def card
-		Card.new('Ace', 'Spades')
-	end
+	
+	let(:card) {Card.new('Ace', 'Spades')}
+	
 
 	it 'has a suit' do
 		expect(card.suit).to eq('Spades')
+		card.suit = 'Queen'
+		expect(card.suit).to eq('Queen')
 	end
 
 	it 'has a number' do
