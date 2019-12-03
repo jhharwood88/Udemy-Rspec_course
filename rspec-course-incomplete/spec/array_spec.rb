@@ -1,9 +1,9 @@
 RSpec.describe Array do 
 
 	it 'should start off empty' do
-		expect(array.length).to eq(0)
-		array.push("Some Value")
-		expect(array.length).to eq(1)
+		expect(subject.length).to eq(0)
+		subject.push("Some Value")
+		expect(subject.length).to eq(1)
 	end
 
 end
